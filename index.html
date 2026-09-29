@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <header class="hero">
+        <div class="container">
+            <img src="assets/profile.jpg" alt="Profile Picture" class="hero__profile">
+            <h1 class="hero__title">John Doe</h1>
+            <p class="hero__subtitle">Full Stack Developer</p>
+            <nav class="hero__nav">
+                <a href="#about" class="hero__nav-link">About</a>
+                <a href="#skills" class="hero__nav-link">Skills</a>
+                <a href="#projects" class="hero__nav-link">Projects</a>
+                <a href="#contact" class="hero__nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">Experienced full stack developer with a passion for building scalable web applications. Skilled in both front-end and back-end technologies.</p>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__item">JavaScript</li>
+                <li class="skills__item">React</li>
+                <li class="skills__item">Node.js</li>
+                <li class="skills__item">Express</li>
+                <li class="skills__item">MongoDB</li>
+            </ul>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects__grid">
+                <div class="project-card">
+                    <img src="assets/project1.jpg" alt="Project 1" class="project-card__image">
+                    <h3 class="project-card__title">E-commerce Platform</h3>
+                    <p class="project-card__description">A full-stack e-commerce platform built with React and Node.js.</p>
+                </div>
+                <div class="project-card">
+                    <img src="assets/project2.jpg" alt="Project 2" class="project-card__image">
+                    <h3 class="project-card__title">Task Management App</h3>
+                    <p class="project-card__description">A task management app using Vue.js and Firebase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <form class="contact__form">
+                <label for="name" class="contact__label">Name</label>
+                <input type="text" id="name" name="name" class="contact__input" required>
+                <label for="email" class="contact__label">Email</label>
+                <input type="email" id="email" name="email" class="contact__input" required>
+                <label for="message" class="contact__label">Message</label>
+                <textarea id="message" name="message" class="contact__textarea" required></textarea>
+                <button type="submit" class="contact__button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2023 John Doe. All rights reserved.</p>
+            <button class="footer__toggle" aria-label="Toggle Dark/Light Mode"></button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
