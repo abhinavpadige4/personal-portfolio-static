@@ -1,0 +1,143 @@
+:root {
+  --color-light-background: #ffffff;
+  --color-light-foreground: #111827;
+  --color-light-primary: #2563eb;
+  --color-light-accent: #10b981;
+  --color-dark-background: #111827;
+  --color-dark-foreground: #f9fafb;
+  --color-dark-primary: #60a5fa;
+  --color-dark-accent: #34d399;
+  --font-family: 'Inter', system-ui, sans-serif;
+  --heading-size: 2.5rem;
+  --body-size: 1rem;
+  --line-height: 1.6;
+  --spacing-unit: 1rem;
+  --sections-padding: 4rem;
+  --container-max-width: 1200px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--color-light-foreground);
+  background-color: var(--color-light-background);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body[data-theme='dark'] {
+  color: var(--color-dark-foreground);
+  background-color: var(--color-dark-background);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+.hero,
+.about,
+.skills,
+.projects,
+.contact {
+  padding: var(--sections-padding) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--heading-size);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+p {
+  font-size: var(--body-size);
+  margin-bottom: var(--spacing-unit);
+}
+
+a {
+  color: var(--color-light-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-light-accent);
+}
+
+button {
+  background-color: var(--color-light-primary);
+  color: var(--color-light-background);
+  border: none;
+  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-light-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--color-dark-foreground);
+    background-color: var(--color-dark-background);
+  }
+
+  a {
+    color: var(--color-dark-primary);
+  }
+
+  a:hover {
+    color: var(--color-dark-accent);
+  }
+
+  button {
+    background-color: var(--color-dark-primary);
+  }
+
+  button:hover {
+    background-color: var(--color-dark-accent);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --heading-size: 2rem;
+    --body-size: 0.9rem;
+    --sections-padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heading-size: 1.5rem;
+    --body-size: 0.8rem;
+    --sections-padding: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  position: relative;
+}
+
+section::before {
+  content: '';
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
